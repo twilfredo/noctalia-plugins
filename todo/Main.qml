@@ -49,7 +49,7 @@ Item {
       });
     }
 
-    function addTodo(text: string, pageId: int = 0) {
+    function addTodo(text, pageId = 0) {
       if (pluginApi && text) {
         var todos = pluginApi.pluginSettings.todos || [];
 
@@ -71,7 +71,7 @@ Item {
       }
     }
 
-    function toggleTodo(id: int) {
+    function toggleTodo(id) {
       if (pluginApi && id >= 0) {
         var todos = pluginApi.pluginSettings.todos || [];
         var todoFound = false;
@@ -124,7 +124,7 @@ Item {
       }
     }
 
-    function removeTodo(id: int) {
+    function removeTodo(id) {
       if (pluginApi && id >= 0) {
         var todos = pluginApi.pluginSettings.todos || [];
         var indexToRemove = -1;
